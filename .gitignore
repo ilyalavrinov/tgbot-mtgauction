@@ -13,3 +13,6 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+cmd/tgbot-mtgauction/tgbot-mtgauction
+cmd/tgbot-mtgauction/bot.cfg
