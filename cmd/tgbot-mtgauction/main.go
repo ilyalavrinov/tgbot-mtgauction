@@ -26,7 +26,9 @@ func main() {
 	}
 
 	tgbot := tgbotbase.NewBot(tgbotbase.Config{TGBot: cfg.TGBot, Proxy_SOCKS5: cfg.Proxy_SOCKS5})
-	tgbot.AddHandler(tgbotbase.NewBackgroundMessageDealer(topdeck.NewPoller()))
+
+	cron := tgbotbase.NewCron()
+	tgbot.AddHandler(tgbotbase.NewBackgroundMessageDealer(topdeck.NewPoller(cron)))
 
 	log.Info("Starting bot")
 	tgbot.Start()
