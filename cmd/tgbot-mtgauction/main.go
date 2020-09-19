@@ -4,7 +4,8 @@ import (
 	"flag"
 
 	"github.com/admirallarimda/tgbotbase"
-	"github.com/ilyalavrinov/tgbot-mtgauction/internal/bot/topdeck"
+	"github.com/ilyalavrinov/tgbot-mtgauction/internal/bot"
+	"github.com/ilyalavrinov/tgbot-mtgauction/internal/bot/db"
 	"github.com/ilyalavrinov/tgbot-mtgauction/internal/log"
 	"gopkg.in/gcfg.v1"
 )
@@ -13,6 +14,7 @@ var argCfg = flag.String("cfg", "./bot.cfg", "path to config")
 
 type config struct {
 	tgbotbase.Config
+	Redis tgbotbase.RedisConfig
 }
 
 func main() {
@@ -28,7 +30,10 @@ func main() {
 	tgbot := tgbotbase.NewBot(tgbotbase.Config{TGBot: cfg.TGBot, Proxy_SOCKS5: cfg.Proxy_SOCKS5})
 
 	cron := tgbotbase.NewCron()
-	tgbot.AddHandler(tgbotbase.NewBackgroundMessageDealer(topdeck.NewPoller(cron)))
+	pool := tgbotbase.NewRedisPool(cfg.Redis)
+	auctionDB := db.NewAuctionDB(pool.GetConnByName("mtgauction"))
+	chatDB := db.NewChatDB(tgbotbase.NewRedisPropertyStorage(pool))
+	tgbot.AddHandler(tgbotbase.NewBackgroundMessageDealer(bot.NewPollReceiver(cron, auctionDB, chatDB)))
 
 	log.Info("Starting bot")
 	tgbot.Start()
