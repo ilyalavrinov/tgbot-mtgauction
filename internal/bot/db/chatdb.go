@@ -6,7 +6,7 @@ import (
 	"github.com/admirallarimda/tgbotbase"
 )
 
-var chatSubscribedKey = "mtgauction:subscribed"
+var chatSubscribedKey = "mtgauction_subscribed"
 
 type ChatDB struct {
 	props tgbotbase.PropertyStorage

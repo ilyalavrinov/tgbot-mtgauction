@@ -2,8 +2,14 @@ github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/PuerkitoBio/goquery v1.5.1 h1:PSPBGne8NIUWw+/7vFBV+kG2J/5MOjbzc7154OaKCSE=
 github.com/PuerkitoBio/goquery v1.5.1/go.mod h1:GsLWisAFVj4WgDibEWF4pvYnkVQBpKBKeU+7zCJoLcc=
-github.com/admirallarimda/tgbotbase v0.0.0-20200131200809-fbd3ee3f4168 h1:SvZyg+SvmSdz3UAAusE/R6WWhDKLd4HgdxuZbVRW3NI=
-github.com/admirallarimda/tgbotbase v0.0.0-20200131200809-fbd3ee3f4168/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
+github.com/admirallarimda/tgbotbase v0.0.2 h1:jgmHLc5cA1sybWSIY26Pg/8JlcXnCjNVSQUEc5HZ65s=
+github.com/admirallarimda/tgbotbase v0.0.2/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
+github.com/admirallarimda/tgbotbase v0.0.3 h1:FtVBe+TfIZNmrzAueDd68/d2HztK1YANIe9vd6JHxqk=
+github.com/admirallarimda/tgbotbase v0.0.3/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
+github.com/admirallarimda/tgbotbase v0.0.4 h1:9KkNAR2nDriflwRBDnrToRwH9Wnn+wW8i+Y3HfX6NNU=
+github.com/admirallarimda/tgbotbase v0.0.4/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
+github.com/admirallarimda/tgbotbase v0.0.5 h1:yguBb3Sv+m4jlFR3Bfwx6aaveWlR64vM4ptmqi74meM=
+github.com/admirallarimda/tgbotbase v0.0.5/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
 github.com/andybalholm/cascadia v1.1.0 h1:BuuO6sSfQNFRu1LppgbD25Hr2vLYW25JvxHs5zzsLTo=
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=
 github.com/antchfx/htmlquery v1.2.3 h1:sP3NFDneHx2stfNXCKbhHFo8XgNjCACnU/4AO5gWz6M=

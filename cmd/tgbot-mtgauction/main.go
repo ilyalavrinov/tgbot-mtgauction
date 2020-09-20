@@ -34,6 +34,7 @@ func main() {
 	auctionDB := db.NewAuctionDB(pool.GetConnByName("mtgauction"))
 	chatDB := db.NewChatDB(tgbotbase.NewRedisPropertyStorage(pool))
 	tgbot.AddHandler(tgbotbase.NewBackgroundMessageDealer(bot.NewPollReceiver(cron, auctionDB, chatDB)))
+	tgbot.AddHandler(tgbotbase.NewEngagementMessageDealer(bot.NewEngagementHandler(chatDB)))
 
 	log.Info("Starting bot")
 	tgbot.Start()

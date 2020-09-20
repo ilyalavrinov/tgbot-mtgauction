@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/PuerkitoBio/goquery v1.5.1 // indirect
-	github.com/admirallarimda/tgbotbase v0.0.0-20200131200809-fbd3ee3f4168
+	github.com/admirallarimda/tgbotbase v0.0.5
 	github.com/antchfx/htmlquery v1.2.3 // indirect
 	github.com/antchfx/xmlquery v1.3.0 // indirect
 	github.com/go-redis/redis v6.15.9+incompatible
