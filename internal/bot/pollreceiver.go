@@ -1,9 +1,11 @@
 package bot
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/admirallarimda/tgbotbase"
+	"github.com/admirallarimda/tgbotbase/pkg/tgbotutil"
 	"github.com/ilyalavrinov/tgbot-mtgauction/internal/bot/db"
 	"github.com/ilyalavrinov/tgbot-mtgauction/internal/bot/topdeck"
 	"github.com/ilyalavrinov/tgbot-mtgauction/internal/log"
@@ -63,5 +65,21 @@ func (p *pollReceiver) processLots() {
 			"id", lot.ID,
 			"name", lot.Name,
 			"subscribersN", len(users)+len(chats))
+
+		picFName, err := tgbotutil.LoadPicToTmp(lot.PicURL(), "mtgauction-")
+		if err != nil {
+			log.Errorw("failed loading pic",
+				"url", lot.PicURL(),
+				"err", err)
+			continue
+		}
+		text := fmt.Sprintf("[%s](%s)\nCurrent bid: %s\nEnds at: %s", lot.Name, lot.URL(), lot.BidCurrent, lot.DateEstimated)
+
+		for _, chat := range chats {
+			msg := tgbotapi.NewPhotoUpload(int64(chat), picFName)
+			msg.Caption = text
+			msg.ParseMode = "MarkdownV2"
+			p.outMsgCh <- msg
+		}
 	}
 }

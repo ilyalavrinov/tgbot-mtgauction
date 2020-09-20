@@ -31,12 +31,21 @@ type Auction struct {
 	Plaform       AuctionPlatform
 	Name          string `json:"lot" redis:"lot"`
 	Image         string `json:"image" redis:"image"`
+	ImagePath     string `json:"image_path" redis:"image_path"`
 	DatePublished string `json:"date_published" redis:"date_published"`
 	DateEstimated string `json:"date_estimated" redis:"date_estimated"`
 
 	BidInitial string `json:"start_bid" redis:"bid_initial"`
 	BidCurrent string `json:"current_bid" redis:"bid_current"`
 	BidCount   string `json:"bid_amount" redis:"bid_count"`
+}
+
+func (a Auction) URL() string {
+	return "https://topdeck.ru/apps/toptrade/auctions/" + a.ID
+}
+
+func (a Auction) PicURL() string {
+	return "https://topdeck.ru/apps/toptrade/uploads/" + a.ImagePath + "/" + a.Image
 }
 
 type AuctionDB struct {

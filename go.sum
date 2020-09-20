@@ -10,6 +10,8 @@ github.com/admirallarimda/tgbotbase v0.0.4 h1:9KkNAR2nDriflwRBDnrToRwH9Wnn+wW8i+
 github.com/admirallarimda/tgbotbase v0.0.4/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
 github.com/admirallarimda/tgbotbase v0.0.5 h1:yguBb3Sv+m4jlFR3Bfwx6aaveWlR64vM4ptmqi74meM=
 github.com/admirallarimda/tgbotbase v0.0.5/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
+github.com/admirallarimda/tgbotbase v0.0.6 h1:h/nRXqmvZtbmU9XTYs6GEesPt8QYWhTMkvL5k2Ckhbs=
+github.com/admirallarimda/tgbotbase v0.0.6/go.mod h1:BEzpodaAUseQILKCQzO4jEqkVRDkxrfOtKQ5orILw38=
 github.com/andybalholm/cascadia v1.1.0 h1:BuuO6sSfQNFRu1LppgbD25Hr2vLYW25JvxHs5zzsLTo=
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=
 github.com/antchfx/htmlquery v1.2.3 h1:sP3NFDneHx2stfNXCKbhHFo8XgNjCACnU/4AO5gWz6M=

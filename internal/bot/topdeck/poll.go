@@ -56,6 +56,7 @@ func (j *pollerJob) Do(scheduledWhen time.Time, cron tgbotbase.Cron) {
 		}
 		result = strings.ReplaceAll(result, "\\\"", "")
 		result = strings.ReplaceAll(result, "\\", "")
+		//fmt.Printf("RESULT %s\n", result)
 
 		dec := json.NewDecoder(strings.NewReader(result))
 		_, err := dec.Token()
