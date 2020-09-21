@@ -73,7 +73,7 @@ func (p *pollReceiver) processLots() {
 				"err", err)
 			continue
 		}
-		text := fmt.Sprintf("[%s](%s)\nCurrent bid: %s\nEnds at: %s", lot.Name, lot.URL(), lot.BidCurrent, lot.DateEstimated)
+		text := fmt.Sprintf("[%s](%s)\nCurrent bid: %s\nEnds at: %s", tgbotutil.EscapeMarkdown(lot.Name), lot.URL(), lot.BidCurrent, lot.DateEstimated)
 
 		for _, chat := range chats {
 			msg := tgbotapi.NewPhotoUpload(int64(chat), picFName)
