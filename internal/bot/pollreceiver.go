@@ -66,6 +66,10 @@ func (p *pollReceiver) processLots() {
 			"name", lot.Name,
 			"subscribersN", len(users)+len(chats))
 
+		if len(chats) == 0 {
+			continue
+		}
+
 		picFName, err := tgbotutil.LoadPicToTmp(lot.PicURL(), "mtgauction-")
 		if err != nil {
 			log.Errorw("failed loading pic",
